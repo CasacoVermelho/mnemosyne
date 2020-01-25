@@ -22,7 +22,7 @@ def registerPage(request):
 			if form.is_valid():
 				form.save()
 				user = form.cleaned_data.get('username')
-				messages.success(request, 'Conta criada para usuário' + user)
+				messages.success(request, 'Conta criada para usuário ' + user)
 
 				return redirect('login')
 		context = {'form':form}
